@@ -43,6 +43,30 @@ You can call use showgroup manually:
 </script>
 ```
 
+You could also implement this with the lazy data-api. Note though that you are then responsible for initialising the
+visibility of the elements, either in javascript or your server-side code:
+
+```html
+<div id="container" data-showgroup-container>
+  <div>
+    <label>Vehicle Type</label>
+    <select id="vehicle" data-showgroup-toggle>
+      <option value="car">Car</option>
+      <option value="bike" selected>Bike</option>
+      <option value="van">Van</option>
+    </select>
+  <div data-showgroups="car,van" style="display: none;">
+    <label>Engine Size</label>
+    <input type="text">
+  </p>
+  <div data-showgroups="car,van,bike">
+    <label>Tyre Pressure</label>
+    <input type="text">
+  </div>
+</div>
+```
+
+
 ## Contributions
 
 Contributions and bugfixes are welcome - just submit a pull request. Please ensure you add new qunit tests to cover

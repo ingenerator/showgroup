@@ -84,4 +84,17 @@ $(function () {
     ok($child_one.is(':visible'), "default group 'one' should be visible");
     ok($child_two.is(':hidden'), "default group 'two' should be visible");
   });
+
+  test("should be lazy-initialisable on change of a field with data-showgroup-toggle", function () {
+    var $fixture = $('#qunit-fixture'),
+        $container = $('<div data-showgroup-container></div>').appendTo($fixture),
+        $select    = $('<select data-showgroup-toggle><option value="one" selected>One</option><option value="two"></option></select>').appendTo($container),
+        $child_one = $('<div data-showgroups="one"></div>').appendTo($container),
+        $child_two = $('<div data-showgroups="two" style="display: none;"></div>').appendTo($container);
+
+    $select.val('two').trigger('change');
+
+    ok($child_one.is(':hidden'), 'Group one should hide when two is selected');
+    ok($child_two.is(':visible'), 'Group two should be visible when two is selected');
+  });
 });

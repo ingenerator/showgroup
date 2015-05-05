@@ -70,4 +70,11 @@
     });
   };
 
+  $(document).on('change.ingen.showgroup.data-api', '[data-showgroup-toggle]', function () {
+    var $this = $(this),
+        $container = $this.closest('[data-showgroup-container]');
+
+    $container.showgroup($this.val());
+  });
+
 })(window.jQuery);
