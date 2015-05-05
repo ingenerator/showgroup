@@ -1,0 +1,49 @@
+# Showgroup
+
+This is a simple jQuery plugin to show and hide groups of elements - eg on a form.
+
+[![Build Status](https://travis-ci.org/ingenerator/showgroup.png?branch=master)](https://travis-ci.org/ingenerator/showgroup)
+
+## Dependencies
+
+* jQuery > 1.*
+
+## Installation
+
+Vendor the package into your project however you prefer. Include src/showgroup.js in your project's javascript - usually
+by compiling it in with any other scripts you're using.
+
+## Usage
+
+You can call use showgroup manually:
+
+```html
+<div id="container" data-showgroup-container data-showgroup-default="car">
+  <div>
+    <label>Vehicle Type</label>
+    <select id="vehicle">
+      <option value="car" selected>Car</option>
+      <option value="bike">Bike</option>
+      <option value="van">Van</option>
+    </select>
+  <div data-showgroups="car,van">
+    <label>Engine Size</label>
+    <input type="text">
+  </p>
+  <div data-showgroups="car,van,bike">
+    <label>Tyre Pressure</label>
+    <input type="text">
+  </div>
+</div>
+<script type="text/javascript">
+  $('#container').showgroup()>;
+  $('#vehicle').on('change', function() {
+    $('#container').showgroup($(this).val());
+  });
+</script>
+```
+
+## Contributions
+
+Contributions and bugfixes are welcome - just submit a pull request. Please ensure you add new qunit tests to cover
+your changes.
