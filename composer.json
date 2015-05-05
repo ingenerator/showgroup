@@ -1,0 +1,24 @@
+{
+  "name": "ingenerator/showgroup",
+  "description": "jQuery plugin to show/hide elements when a field value is selected",
+  "keywords": [
+    "js",
+    "jquery"
+  ],
+  "homepage": "https://github.com/ingenerator/showgroup",
+  "authors": [
+    {
+      "name": "Andrew Coulton",
+      "homepage": "https://github.com/acoulton"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/ingenerator/showgroup"
+  },
+  "license": "BSD",
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0.x-dev"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "showgroup",
+  "version": "1.0.0",
+  "description": "Show and hide groups of fields when a value is selected on a form",
+  "devDependencies": {
+    "grunt":                "~0.4.1",
+    "grunt-contrib-connect": "~0.7.0",
+    "grunt-contrib-qunit":  "~0.4.0",
+    "grunt-contrib-jshint": "^0.10.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ingenerator/showgroup"
+  },
+  "author": "Andrew Coulton",
+  "license": "BSD"
+}
