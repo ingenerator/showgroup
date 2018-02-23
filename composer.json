@@ -15,7 +15,7 @@
   "support": {
     "issues": "https://github.com/ingenerator/showgroup"
   },
-  "license": "BSD",
+  "license": "BSD-3-Clause",
   "extra": {
     "branch-alias": {
       "dev-master": "1.0.x-dev"
